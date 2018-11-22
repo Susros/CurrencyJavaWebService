@@ -28,25 +28,25 @@ The Admin Client is a command line application which allows an administrator to 
 
 On successful login, the application will present the user with a prompt. This is a free-form text prompt. The user may type one of 10 commands at the prompt, supplying all required parameters. The commands (with parameters) consist of:
 
-1. addCurrency <currencyCode>
-2. removeCurrency <currencyCode>
-3. listCurrencies
-4. conversionsFor <currencyCode>
-5. addRate <fromCurrency> <toCurrency> <rate>
-6. updateRate <fromCurrency> <toCurrency> <rate> 7. removeRate <fromCurrency> <toCurrency>
-8. listRates
-9. help
-10. logout
+1. `addCurrency <currencyCode>`
+2. `removeCurrency <currencyCode>`
+3. `listCurrencies`
+4. `conversionsFor <currencyCode>`
+5. `addRate <fromCurrency> <toCurrency> <rate>`
+6. `updateRate <fromCurrency> <toCurrency> <rate> 7. removeRate <fromCurrency> <toCurrency>`
+8. `listRates`
+9. `help`
+10. `logout`
 
 ### Conversion Client
 
 The application does not require a user to login, all functionality is unrestricted. The application will present the user with a prompt. The user may type one of 4 commands at the prompt, supplying all required parameters:
 
-1. convert <fromCurrency> <toCurrency> <amount> 
-2. rateOf <fromCurrency> <toCurrency>
-3. listRates
-4. help
-5. exit
+1. `convert <fromCurrency> <toCurrency> <amount>`
+2. `rateOf <fromCurrency> <toCurrency>`
+3. `listRates`
+4. `help`
+5. `exit`
 
 ## Conceptual Overview
 
@@ -62,8 +62,8 @@ The application does not require a user to login, all functionality is unrestric
 1. Copy currency and identity folder into tomcat webapps
 2. AdminClient and ConversionClient folders contains the client applications. Thus, those two folders are outside of server.
 3. Start tomcat. Make sure the port is listening at 8080 on localhost.
-4. For Admin Client, got to AdminClient folder and run ```java AdminClient <usernaame> <password>```
-5. For Conversion Client, got to ConversionClient folder and run ```java CurrencyClient```
+4. For Admin Client, got to AdminClient folder and run `java AdminClient <usernaame> <password>`
+5. For Conversion Client, got to ConversionClient folder and run `java CurrencyClient`
 
 If it fails, please recompiled it as followed:
 
@@ -73,6 +73,6 @@ If it fails, please recompiled it as followed:
 export /Users/path/to//axis/lib/axis.jar;/Users/path/to//axis/lib/commons-discovery- 0.2.jar;/Users/path/to//axis/lib/commons-logging- 1.0.4.jar;/Users/path/to//axis/lib/jaxrpc.jar;/Users/path/to//axis/lib/log4j- 1.2.8.jar;/Users/path/to//axis/lib/saaj.jar;/Users/path/to//axis/lib/wsdl4j- 1.5.1.jar
 ```
 
-2. Compile all Java files in AdminClient and ConversionClient folders: ```javac *```
-3. Compile all java files in currency/WEB-INF/classes/seng3400a2 and identity/WEB-INF/classes/seng3400a2: ```javac *```
-4. If WSDL need to be regenerated: ```localhost:8080/identity/SERVICE_NAME.jws```, then convert WSDL into Java with java org.apache.axis.wsdl.WSDL2Java your_wsdl.xml```
+2. Compile all Java files in AdminClient and ConversionClient folders: `javac *`
+3. Compile all java files in currency/WEB-INF/classes/seng3400a2 and identity/WEB-INF/classes/seng3400a2: `javac *`
+4. If WSDL need to be regenerated: `localhost:8080/identity/SERVICE_NAME.jws`, then convert WSDL into Java with `java org.apache.axis.wsdl.WSDL2Java your_wsdl.xml`
