@@ -1,0 +1,20 @@
+import seng3400a2.Sessions;
+
+/**
+ *	Authorisation endpoint of identity
+ *
+ *	@author Kelvin Yin (contact@kelvinyin.com)
+ */
+public class Authorisation {
+	
+	/**
+	 *	Authorise users with session key.
+	 *
+	 *	@param key Session key of user
+	 *
+	 *	@return boolean True if key exists in sessions, false otherwise.
+	 */
+	public boolean authorise(String key) {
+		return Sessions.hasKey(key);
+	}
+}
