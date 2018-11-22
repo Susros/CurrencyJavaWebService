@@ -50,6 +50,8 @@ The application does not require a user to login, all functionality is unrestric
 
 ## Conceptual Overview
 
+[!alt text] (https://github.com/Susros/CurrencyJavaWebService/blob/master/conceptual_overview.png "Concept overview image")
+
 ## Requirement
 
 1. Java 8
